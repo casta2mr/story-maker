@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>Javascript Story Maker</title>
+    </head>
+    
+    <body>
+        <h1>Story Maker</h1>
+        
+        <div id="inputs">
+            <!-- input boxes for noun, adjective, and name -->
+            Noun: <input id="noun" placeholder="Noun"><br>
+            Adjective: <input id="adjective" placeholder="Adjective"><br>
+            Someone's Name: <input id="name" placeholder="Name"><br>
+            
+            <!-- button to display story -->
+            <button type="button" onclick="storymaker()"> Make Story </button><br>
+        </div>
+        
+        <!-- div to contain story -->
+        <div id="story"></div>
+    </body>
+    
+    <script type="text/javascript">
+        function storymaker() {
+            /* variables for user inputs */
+            var noun = document.getElementById("noun").value;
+            var adj = document.getElementById("adjective").value;
+            var name = document.getElementById("name").value;
+            
+            /* write story to div */
+            document.getElementById("story").innerHTML = name + " likes a " + adj + " " + noun + ".";
+        }
+    </script>
+</html>
